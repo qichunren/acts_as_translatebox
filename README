@@ -10,7 +10,23 @@ Blog:http://qichunren.javaeye.com
 Example
 =======
 
-To be added.
+class PostsController < ApplicationController
+
+	acts_as_translatebox :only => ["index","show"]
+  
+  def index
+  	@posts = Post.latest(5)
+  end
+  
+  def new
+  	@post = Post.new
+  end
+  
+  def show
+  	@post = Post.find(params[:id])
+  end
+
+end
 
 
 Copyright (c) 2009 [name of plugin creator], released under the MIT license
