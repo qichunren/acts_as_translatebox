@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{acts_as_translatebox}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["qichunren"]
@@ -16,14 +16,15 @@ Gem::Specification.new do |s|
     "README"
   ]
   s.files = [
-    "MIT-LICENSE",
+    ".gitignore",
+     "MIT-LICENSE",
      "README",
      "Rakefile",
      "VERSION",
+     "acts_as_translatebox.gemspec",
      "init.rb",
      "install.rb",
      "lib/acts_as_translatebox.rb",
-     "tasks/acts_as_translatebox_tasks.rake",
      "test/acts_as_translatebox_test.rb",
      "test/test_helper.rb",
      "uninstall.rb"

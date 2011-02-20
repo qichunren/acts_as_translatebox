@@ -1,3 +1,4 @@
+# encoding: utf-8
 # ActsAsTranslatebox
 module ActsAsTranslatebox 
   
@@ -83,12 +84,12 @@ cursor:pointer;
   </style>
   <div id="translate_input" style="display:none;">
   <span onclick="document.getElementById('translate_input').style.display='none'">X</span>
-     <input id='words' type="text" style="width:280px;vertical-align:middle;"/>
+     <input id='words' type="text" style="width:280px;vertical-align:middle;" value="输入中文 ..." />
      <input type='button' value='翻译' style="vertical-align:middle;" onclick="translate_it()"/>
     <div id="target" style="margin-top:4px;width:330px;height:120px;border:1px solid #FF9900;background:#FFF;overflow:scroll" ></div>
   </div>
   <div id="translate_button">
-    <a href="#" style="text-decoration:none;color:black" onclick="document.getElementById('translate_input').style.display='';return false;">翻译助手</a>
+    <a href="#" style="text-decoration:none;color:black" onclick="e = document.getElementById('translate_input');if(e.style.display==''){e.style.display='none';}else{e.style.display='';}return false;">翻译助手</a>
   </div>      
       HTML
       response.body = response.body.to_s + translatebox_html
