@@ -1,23 +1,20 @@
+require "rubygems"
 require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
 
-desc 'Default: run unit tests.'
-task :default => :test
+begin
+  require 'jeweler'
 
-desc 'Test the acts_as_translatebox plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
-end
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "acts_as_translatebox"
+    gemspec.summary = "add a translate box at the bottom of page."
+    gemspec.description = "add a translate box at the bottom of page."
+    gemspec.email = "whyruby@gmail.com"
+    gemspec.homepage = "https://github.com/qichunren/acts_as_translatebox"
+    gemspec.authors = ["qichunren"]
+    
+  end 
+  Jeweler::GemcutterTasks.new
 
-desc 'Generate documentation for the acts_as_translatebox plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'ActsAsTranslatebox'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+rescue LoadError
+  puts "Jeweler not available. Install it with: gem install jeweler"
 end
