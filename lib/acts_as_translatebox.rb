@@ -1,5 +1,11 @@
 # ActsAsTranslatebox
-module ActsAsTranslatebox
+module ActsAsTranslatebox 
+  
+  module Rails
+    class Railtie < ::Rails::Railtie
+      
+    end
+  end
   
   def self.included(base)
     base.send :include, InstanceMethods
