@@ -38,7 +38,7 @@ in your controller.
 
         end
         
-![Demo](translate_demo.png)
+![Demo](https://github.com/qichunren/acts_as_translatebox/raw/master/translate_demo.png)
 
 
 Copyright (c) 2009 [name of plugin creator], released under the MIT license
